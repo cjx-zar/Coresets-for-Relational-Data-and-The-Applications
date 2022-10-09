@@ -1,0 +1,9 @@
+.vscode/
+*.data
+__pycache__/
+
+test*
+*log*
+
+database_conf/*
+!database_conf/example.json

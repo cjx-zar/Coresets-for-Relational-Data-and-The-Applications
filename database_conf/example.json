@@ -1,0 +1,36 @@
+{
+    "user_name": "***",
+    "password": "***",
+    "port": 5432,
+    "ip": "127.0.0.1",
+    "database": "credit",
+    "temp_buffers": "1GB",
+    "work_mem": "1GB",
+    "cpu_num": 50,
+    "tables": {
+        "application": ["amt_income_total", "amt_credit", "region_population_relative", "days_birth", "days_employed", "days_registration", "days_id_publish", "hour_appr_process_start", "sk_id_curr"],
+        "previous": ["amt_application", "hour_appr_process_start",
+            "days_decision", "sellerplace_area", "sk_id_curr", "sk_id_prev"
+        ],
+        "credit_card": ["months_balance", "amt_credit_limit_actual", "sk_id_prev"],
+        "bureau": ["days_credit", "days_credit_update", "sk_id_curr"],
+        "installments": ["num_instalment_number", "days_instalment", "amt_instalment", "sk_id_prev"]
+    },
+    "connects": [
+        [
+            [
+                ["previous", "sk_id_prev"],
+                ["credit_card", "sk_id_prev"],
+                ["installments", "sk_id_prev"]
+            ], ""
+        ],
+        [
+            [
+                ["previous", "sk_id_curr"],
+                ["application", "sk_id_curr"],
+                ["bureau", "sk_id_curr"]
+            ], ""
+        ]
+    ],
+    "target": ["application", "target"]
+}
