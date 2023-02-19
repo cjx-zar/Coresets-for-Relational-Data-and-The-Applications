@@ -1,4 +1,7 @@
 # Aggregation Tree with Pseudo-Cube
+
+Source code for NIPS 2022 Paper: Coresets for Relational Data and The Applications. For more informations, please refer to [arXiv](https://arxiv.org/abs/2210.04249).
+
 ---
 Follow example.json to organize your database table structure into a configuration file，then run
 
